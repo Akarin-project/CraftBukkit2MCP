@@ -13,7 +13,7 @@ import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
 
 public class CraftInventoryPlayer extends CraftInventory implements org.bukkit.inventory.PlayerInventory, EntityEquipment {
-    public CraftInventoryPlayer(minecraft.entity.player.InventoryPlayer inventory) {
+    public CraftInventoryPlayer(net.minecraft.entity.player.InventoryPlayer inventory) {
         super(inventory);
     }
 

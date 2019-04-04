@@ -10,10 +10,10 @@ import org.bukkit.attribute.AttributeModifier;
 
 public class CraftAttributeInstance implements AttributeInstance {
 
-    private final entity.ai.attributes.IAttributeInstance handle;
+    private final net.minecraft.entity.ai.attributes.IAttributeInstance handle;
     private final Attribute attribute;
 
-    public CraftAttributeInstance(entity.ai.attributes.IAttributeInstance handle, Attribute attribute) {
+    public CraftAttributeInstance(net.minecraft.entity.ai.attributes.IAttributeInstance handle, Attribute attribute) {
         this.handle = handle;
         this.attribute = attribute;
     }
@@ -36,7 +36,7 @@ public class CraftAttributeInstance implements AttributeInstance {
     @Override
     public Collection<AttributeModifier> getModifiers() {
         List<AttributeModifier> result = new ArrayList<AttributeModifier>();
-        for (entity.ai.attributes.AttributeModifier nms : handle.getModifiers()) {
+        for (net.minecraft.entity.ai.attributes.AttributeModifier nms : handle.getModifiers()) {
             result.add(convert(nms));
         }
 
@@ -65,11 +65,11 @@ public class CraftAttributeInstance implements AttributeInstance {
        return handle.getAttribute().getDefaultValue();
     }
 
-    private static entity.ai.attributes.AttributeModifier convert(AttributeModifier bukkit) {
-        return new entity.ai.attributes.AttributeModifier(bukkit.getUniqueId(), bukkit.getName(), bukkit.getAmount(), bukkit.getOperation().ordinal());
+    private static net.minecraft.entity.ai.attributes.AttributeModifier convert(AttributeModifier bukkit) {
+        return new net.minecraft.entity.ai.attributes.AttributeModifier(bukkit.getUniqueId(), bukkit.getName(), bukkit.getAmount(), bukkit.getOperation().ordinal());
     }
 
-    private static AttributeModifier convert(entity.ai.attributes.AttributeModifier nms) {
+    private static AttributeModifier convert(net.minecraft.entity.ai.attributes.AttributeModifier nms) {
         return new AttributeModifier(nms.getID(), nms.getName(), nms.getAmount(), AttributeModifier.Operation.values()[nms.getOperation()]);
     }
 }

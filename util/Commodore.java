@@ -127,7 +127,7 @@ public class Commodore
         ClassReader cr = new ClassReader( b );
         ClassWriter cw = new ClassWriter( cr, 0 );
 
-        cr.accept( new ClassVisitor( Opcodes.ASM6, cw )
+        cr.accept( new ClassVisitor( Opcodes.ASM5, cw ) // Akarin - ASM6 -> ASM5
         {
             @Override
             public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions)
