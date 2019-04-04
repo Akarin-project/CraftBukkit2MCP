@@ -18,7 +18,7 @@ import net.minecraft.scoreboard.Score;
 import net.minecraft.scoreboard.ServerScoreboard;
 import net.minecraft.scoreboard.ScorePlayerTeam;
 
-import org.apache.commons.lang.Validate;
+import org.apache.commons.lang3.Validate;
 import org.bukkit.craftbukkit.entity.CraftPlayer;
 import org.bukkit.craftbukkit.util.WeakCollection;
 import org.bukkit.entity.Player;

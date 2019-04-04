@@ -65,8 +65,8 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.server.management.UserListWhitelistEntry;
 import net.minecraft.world.WorldServer;
 
-import org.apache.commons.lang.Validate;
-import org.apache.commons.lang.NotImplementedException;
+import org.apache.commons.lang3.Validate;
+import org.apache.commons.lang3.NotImplementedException;
 import org.bukkit.Statistic.Type;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.configuration.serialization.DelegateDeserialization;

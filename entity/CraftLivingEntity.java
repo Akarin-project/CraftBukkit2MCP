@@ -34,7 +34,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.Potion;
 
-import org.apache.commons.lang.Validate;
+import org.apache.commons.lang3.Validate;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
