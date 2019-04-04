@@ -1,0 +1,25 @@
+package org.bukkit.craftbukkit.block.data;
+
+import org.bukkit.block.data.Rail;
+
+import org.bukkit.block.data.Rail.Shape;
+
+public abstract class CraftRail extends CraftBlockData implements Rail {
+
+    private static final minecraft.block.properties.PropertyEnum<?> SHAPE = getEnum("shape");
+
+    @Override
+    public Shape getShape() {
+        return get(SHAPE, Shape.class);
+    }
+
+    @Override
+    public void setShape(Shape shape) {
+        set(SHAPE, shape);
+    }
+
+    @Override
+    public java.util.Set<Shape> getShapes() {
+        return getValues(SHAPE, Shape.class);
+    }
+}
